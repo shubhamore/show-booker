@@ -4,10 +4,12 @@ import Bookings from './pages/Bookings';
 import Home from './pages/Home';
 import DetailedShow from './pages/DetailedShow';
 import SearchedShow from './pages/SearchedShow';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
+      <NavBar/>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/booking' element={<Bookings />}/>

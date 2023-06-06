@@ -15,12 +15,12 @@ export default function SearchedShow() {
     return (
         <div>
             <Search />
-            <h2>Results for {query}</h2>
+            <h2>Results for "{query}"</h2>
             <hr />
             <div className='show-container'>
-                {data.map(i => {
+                {data.length>0?data.map(i => {
                     return <Show data={i.show} key={i.show.id} />
-                })}
+                }):"No results found"}
             </div>
         </div>
     )

@@ -13,31 +13,35 @@ export default function DetailedShow() {
   }, [])
   useEffect(() => {
     console.log('new data=', data)
-    console.log(data.genres)
+    // console.log(data.genres)
   }, [data])
   return (
-    <div>
+    <div style={{ margin: "25px" }}>
       {loading ? (
         <div>
           <h1>Loading</h1>
         </div>
-      ) : (<div>
-        <img src={data.image ? data.image.medium : require('../assets/not-found.jpeg')} alt='show-img'></img>
-        <div>
-          <h1>{data.name}</h1>
-          <div
-            className="summary"
-            dangerouslySetInnerHTML={{ __html: data.summary }}
-          />
-          <p>Language : {data.language}</p>
-          <p>Status : {data.status}</p>
-          <p>Average Runtime : {data.averageRuntime} mins</p>
-          <p>Premiered : {data.premiered}</p>
-          <p>Genre : {data.genres ? data.genres.map((i, ind) => {
-            return <span key={ind}>{i}</span>
-          }) : "N/A"}</p>
-        </div>
-      </div>)}
+      ) :
+        (<div className='detail-container'>
+          <div className='detail-img'>
+            <img style={{height:'500px',maxWidth:'85vw'}} src={data.image ? data.image.original : require('../assets/not-found.jpeg')} alt='show-img'></img>
+            <button style={{padding:' 10px',width:'100%',borderRadius:'10px',background:'#76f150',fontSize:'1.2rem',fontWeight:'bold',marginTop:'35px'}}>Book Tickets</button>
+          </div>
+          <div className='detail-text'>
+            <h1>{data.name}</h1>
+            <div
+              className="summary"
+              dangerouslySetInnerHTML={{ __html: data.summary }}
+            />
+            <p><b>Language</b> : {data.language?data.language:"N/A"}</p>
+            <p><b>Status</b> : {data.status?data.status:"N/A"}</p>
+            <p><b>Average Runtime</b> : {data.averageRuntime?data.averageRuntime:"N/A"} mins</p>
+            <p><b>Premiered</b> : {data.premiered?data.premiered:"N/A"}</p>
+            <p><b>Genre</b> : {data.genres ? data.genres.map((i, ind) => {
+              return <span className='genre' key={ind}>{i}</span>
+            }) : "N/A"}</p>
+          </div>
+        </div>)}
     </div>
   )
 }

@@ -14,6 +14,7 @@ export default function Show({ data }) {
       </div>
       <h1 style={{maxWidth:"90%"}}>{data.name}</h1>
       <p style={{maxWidth:"90%",padding:'10px 0px'}}>{summaryText}</p>
+      <p style={{marginBottom:"10px"}}>Rating: <b>{data.rating.average?data.rating.average:"N/A"}</b></p>
       <button style={{fontSize:'1.25rem',padding:'10px',borderRadius:'10px',background:'#984df7'}}><Link style={{color:'white'}} to={`/show/${data.id}`}>See More</Link></button>
     </div>
   )
