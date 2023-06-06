@@ -16,7 +16,7 @@ export default function NavBar() {
                 <NavLink to="/" style={({ isActive }) => ({
                     color: isActive ? 'greenyellow' : 'white'
                 })}>
-                    ShowBookerz
+                    Showbooker
                 </NavLink>
             </div>
             <div style={{ margin: '10px' }}>
