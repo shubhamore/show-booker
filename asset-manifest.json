@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/show-booker/static/css/main.25342bc8.css",
+    "main.js": "/show-booker/static/js/main.0cc7a957.js",
+    "index.html": "/show-booker/index.html",
+    "main.25342bc8.css.map": "/show-booker/static/css/main.25342bc8.css.map",
+    "main.0cc7a957.js.map": "/show-booker/static/js/main.0cc7a957.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25342bc8.css",
+    "static/js/main.0cc7a957.js"
+  ]
+}
