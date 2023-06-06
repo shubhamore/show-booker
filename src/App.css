@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .2s ease-in-out;
+  text-decoration: none;
+}
+button:hover{
+  opacity: 0.9;
+}
+body{
+  background-color: #f3efff;
+}
+.App{
+  min-height: 100vh;
+  max-width: 100vw;
+}
+/* home */
+.home{
+  padding: 0px 30px;
+  box-sizing: border-box;
+}
+hr{
+  margin-bottom: 30px;
+}
+header{
+  text-align: center;
+  margin: 50px 0px;  
+}
+header h1{
+  color:#1334f3;
+  font-size: 2.75rem;
+}
+header h2{
+  margin: 30px 0px;
+}
+header input{
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 15px;
+  width: 450px;
+  max-width: 95%;
+  border: 2px solid #1334f3;
+}
+header button{
+  display: block;
+  margin: 25px auto;
+  font-size: 1.5rem;
+  padding: 10px 45px;
+  border-radius: 10px;
+  background-color: #1334f3;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+}
+.show-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.show-wrapper{
+  width: '275px';
+  display:'flex';
+  flex-direction:'column';
+  align-items:'center';
+  text-align:'center';
+}
+.rounded-img{
+  border-radius: 10px;
+}
+.show-wrapper,.img-wrapper{
+  transition: all .5s ease-in-out;
+}
+.show-wrapper:hover{
+  transform: scale(1.05);
+}
+.img-wrapper{
+ opacity: .85;
+}
+.img-wrapper:hover{
+  opacity: 1;
+}
