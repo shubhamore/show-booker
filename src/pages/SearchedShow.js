@@ -15,7 +15,7 @@ export default function SearchedShow() {
     return (
         <div>
             <Search />
-            <h2>Searched={query}</h2>
+            <h2>Results for {query}</h2>
             <hr />
             <div className='show-container'>
                 {data.map(i => {

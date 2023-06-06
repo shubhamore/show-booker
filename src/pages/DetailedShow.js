@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
-const imgLocation = '../../assets/not-found.jpeg'
 
 export default function DetailedShow() {
   const { id } = useParams();
@@ -23,7 +22,7 @@ export default function DetailedShow() {
           <h1>Loading</h1>
         </div>
       ) : (<div>
-        <img src={data.image ? data.image.medium : imgLocation} alt='show-img'></img>
+        <img src={data.image ? data.image.medium : require('../assets/not-found.jpeg')} alt='show-img'></img>
         <div>
           <h1>{data.name}</h1>
           <div

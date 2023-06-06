@@ -67,6 +67,8 @@ header button{
 }
 .rounded-img{
   border-radius: 10px;
+  height: 295px;
+  width: 210px;
 }
 .show-wrapper,.img-wrapper{
   transition: all .5s ease-in-out;
