@@ -11,7 +11,7 @@ export default function SearchedShow() {
         fetch(`https://api.tvmaze.com/search/shows?q=${query}`)
             .then(data => data.json())
             .then(d => setData(d))
-    }, [])
+    }, [searchParams])
     return (
         <div>
             <Search />
