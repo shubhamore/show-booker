@@ -1,14 +1,14 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 
 export default function Bookings() {
   const getLocalMovies = () => {
     let m = localStorage.getItem('movies')
     if (m) return JSON.parse(m)
     return []
-}
-const [movies, setMovies] = useState(getLocalMovies);
+  }
+  const [movies, setMovies] = useState(getLocalMovies);
   return (
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',margin:'5vh'}}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '5vh' }}>
       <table>
         <thead>
           <tr>
@@ -21,7 +21,7 @@ const [movies, setMovies] = useState(getLocalMovies);
           </tr>
         </thead>
         <tbody>
-          {movies.map(movie=>{
+          {movies.map(movie => {
             return <tr>
               <td>{movie.movie}</td>
               <td>{movie.name}</td>
