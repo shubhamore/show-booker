@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+const imgLocation = '../../assets/not-found.jpeg'
+
 
 export default function Show({ data }) {
   // console.log("data=", data)
@@ -7,8 +9,8 @@ export default function Show({ data }) {
   return (
     <div className='show-wrapper' style={{ width: '275px',display:'flex',flexDirection:'column' ,alignItems:'center',textAlign:'center',background:'#8696FE',margin:'20px',padding:'25px 0px',borderRadius:'20px',}}>
       <div className='img-wrapper'>
-        <Link to={`show/${data.id}`}>
-          <img src={data.image.medium} alt='show' className='rounded-img'></img>
+        <Link to={`/show/${data.id}`}>
+          <img src={data.image?data.image.medium:imgLocation} alt='show' className='rounded-img'></img>
         </Link>
       </div>
       <h1 style={{maxWidth:"90%"}}>{data.name}</h1>
