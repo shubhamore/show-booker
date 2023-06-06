@@ -13,7 +13,7 @@ export default function SearchedShow() {
             .then(d => setData(d))
     }, [query])
     return (
-        <div>
+        <div style={{margin:"0 30px"}}>
             <Search />
             <h2>Results for "{query}"</h2>
             <hr />

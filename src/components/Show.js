@@ -6,7 +6,7 @@ export default function Show({ data }) {
   // console.log("data=", data)
   const summaryText = data.summary ? `${data.summary.split(' ').slice(0, 10).join(' ').replace(/<.+?>/g, '')}...` : "N/A"
   return (
-    <div className='show-wrapper' style={{ width: '275px',display:'flex',flexDirection:'column' ,alignItems:'center',textAlign:'center',background:'#8696FE',margin:'20px',padding:'25px 0px',borderRadius:'20px',}}>
+    <div className='show-wrapper' style={{ width: '275px',display:'flex',flexDirection:'column' ,alignItems:'center',textAlign:'center',background:'#8696FE',margin:'20px',padding:'15px 0px',borderRadius:'20px',}}>
       <div className='img-wrapper'>
         <Link to={`/show/${data.id}`}>
           <img src={data.image?data.image.medium:require('../assets/not-found.jpeg')} alt='show' className='rounded-img'></img>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 
 export default function DetailedShow() {
   const { id } = useParams();
@@ -25,7 +25,7 @@ export default function DetailedShow() {
         (<div className='detail-container'>
           <div className='detail-img'>
             <img style={{height:'500px',maxWidth:'85vw'}} src={data.image ? data.image.original : require('../assets/not-found.jpeg')} alt='show-img'></img>
-            <button style={{padding:' 10px',width:'100%',borderRadius:'10px',background:'#76f150',fontSize:'1.2rem',fontWeight:'bold',marginTop:'35px'}}>Book Tickets</button>
+            <button style={{padding:' 10px',borderRadius:'10px',background:'#76f150',fontSize:'1.2rem',fontWeight:'bold',marginTop:'35px'}}><Link to={`/form/${id}`} style={{width:"100%"}}>Book Tickets</Link></button>
           </div>
           <div className='detail-text'>
             <h1>{data.name}</h1>
